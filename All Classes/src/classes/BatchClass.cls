@@ -14,6 +14,7 @@ global class BatchClass implements Database.Batchable<SObject>{
                  	    NewDupeList.add(newObjScope);
                     	system.debug('Value of Updated Duplicate Account '+NewDupeList);
                     	Database.update(NewDupeList);
+                    	// lalalalalalalal
           /*          Duplicate_Account__c duacc=[select Date_30__c,Child_Number__c,createddate 
                                                 from Duplicate_Account__c where Account__c= :newObjScope.Account__c 
                                                 order by Date_30__c DESc limit 1 ]; */
