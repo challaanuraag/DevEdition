@@ -1,0 +1,35 @@
+<apex:page controller="CreateUserController">
+  <apex:form >
+      <apex:pageblock >
+          <apex:panelGrid columns="4">
+               <apex:outputLabel value="First Name"/>
+               <apex:inputText required="true" id="firstName" value="{!firstName}"/>
+               <apex:outputLabel value="Last Name"/>
+                    <apex:inputText required="true" id="lastName" value="{!lastName}"/>
+                    <apex:outputLabel value="Community Nickname"/>
+                    <apex:inputText required="true" id="communityNickname" value="{!communityNickname}"/>
+                    <apex:outputLabel value="Alias" />
+                    <apex:inputText required="true" id="alias" value="{!alias}"/>                    
+
+                    <apex:outputLabel value="Company"/>
+                    <apex:inputText required="true" id="company" value="{!company}"/>
+
+                    <apex:outputLabel value="Email"/>
+                    <apex:inputText required="true" id="email" value="{!email}" />
+                    <apex:outputLabel value="Role"/>
+                    <apex:selectList value="{!Roleselected}">
+                    <apex:selectOptions value="{!Roles}">
+                    </apex:selectOptions>
+                    </apex:selectList> 
+                    
+                    <apex:outputLabel value="Profile"/>
+                    <apex:selectList value="{!Profileselected}">
+                    <apex:selectOptions value="{!Profiles}">
+                    </apex:selectOptions>
+                    </apex:selectList>                      
+                    
+                    <apex:commandButton action="{!registerUser}" value="Submit" id="submit" />
+      </apex:panelGrid>
+      </apex:pageblock>
+  </apex:form>
+</apex:page>
